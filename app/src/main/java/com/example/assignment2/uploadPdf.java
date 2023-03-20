@@ -51,7 +51,7 @@ public class uploadPdf extends AppCompatActivity {
         setContentView(R.layout.activity_upload_pdf);
         button_upload = findViewById(R.id.buttonUpload);
         pdf_name = findViewById(R.id.textViewPdf);
-        button_download = findViewById(R.id.buttonDownload);
+        //button_download = findViewById(R.id.buttonDownload);
         button_viewFilePdf = findViewById(R.id.buttonViewPdf);
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference("Uploads");
@@ -114,42 +114,42 @@ public class uploadPdf extends AppCompatActivity {
             }
         });
 
-        button_download.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                download();
-
-            }
-        });
-    }
-
-    public void download()
-    {
-        storageReference= FirebaseStorage.getInstance().getReference();
-        StorageReference ref=storageReference.child("mobile.pdf");
-
-        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-            @Override
-            public void onSuccess(Uri uri) {
-                String url=uri.toString();
-                downloadFile(uploadPdf.this,"Mobile",".pdf",DIRECTORY_DOWNLOADS,url);
-
-            }
-        });
-    }
-
-    public void downloadFile(Context context, String fileName, String fileExtension, String destinationDirectory, String url) {
-
-        DownloadManager downloadmanager = (DownloadManager) context.
-                getSystemService(Context.DOWNLOAD_SERVICE);
-        Uri uri = Uri.parse(url);
-        DownloadManager.Request request = new DownloadManager.Request(uri);
-
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
-
-        downloadmanager.enqueue(request);
+//        button_download.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                download();
+//
+//            }
+//        });
+//    }
+//
+//    public void download()
+//    {
+//        storageReference= FirebaseStorage.getInstance().getReference();
+//        StorageReference ref=storageReference.child("mobile.pdf");
+//
+//        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//            @Override
+//            public void onSuccess(Uri uri) {
+//                String url=uri.toString();
+//                downloadFile(uploadPdf.this,"Mobile",".pdf",DIRECTORY_DOWNLOADS,url);
+//
+//            }
+//        });
+//    }
+//
+//    public void downloadFile(Context context, String fileName, String fileExtension, String destinationDirectory, String url) {
+//
+//        DownloadManager downloadmanager = (DownloadManager) context.
+//                getSystemService(Context.DOWNLOAD_SERVICE);
+//        Uri uri = Uri.parse(url);
+//        DownloadManager.Request request = new DownloadManager.Request(uri);
+//
+//        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+//        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
+//
+//        downloadmanager.enqueue(request);
     }
 }
 

@@ -47,47 +47,32 @@
         android:id="@+id/buttonUpload"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/black"
         android:text="upload pdf"
-        android:textColor="#FF9800"
-        android:textSize="18dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDownload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPdf" />
-
-    <Button
-        android:id="@+id/buttonDownload"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:backgroundTint="@color/black"
-        android:text="download pdf"
         android:textColor="#FF9800"
         android:textSize="18dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/buttonViewPdf"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUpload" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPdf" />
 
     <Button
         android:id="@+id/buttonViewPdf"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="94dp"
+        android:layout_marginBottom="150dp"
         android:backgroundTint="@color/black"
         android:text="VIEW PDF FILES"
         android:textColor="#FF9800"
-        android:textSize="18dp"
 
+        android:textSize="18dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDownload" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonUpload" />
 
     <ImageView
         android:id="@+id/imageView"
