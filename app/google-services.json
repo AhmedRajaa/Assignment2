@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "868340007771",
+    "project_id": "assignent2pdf",
+    "storage_bucket": "assignent2pdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868340007771:android:03014a19aba1c89b2b107e",
+        "android_client_info": {
+          "package_name": "com.example.assignment2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868340007771-flt5uffp05bhlqqdk89t1ve0lbk8i451.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_H0o8JmVVHqGBZh71IxsfKieplnHoTVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868340007771-flt5uffp05bhlqqdk89t1ve0lbk8i451.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
